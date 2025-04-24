@@ -27,7 +27,7 @@ const TotalBalancebox = ({
             </div>
         </div>
     </section>
-  )
+  ) 
 }
 
 export default TotalBalancebox

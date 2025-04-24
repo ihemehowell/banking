@@ -1,12 +1,13 @@
-import HeaderBox from '@/components/ui/HeaderBox'
-import TotalBalancebox from '@/components/ui/TotalBalancebox';
+import HeaderBox from '@/components/HeaderBox'
+import RightSidebar from '@/components/RightSidebar';
+import TotalBalancebox from '@/components/TotalBalancebox';
 
 
 const Home = () => {
-  const loggedIn ={ firstName: 'Howell'};
+  const loggedIn ={ firstName: 'Howell', lastName: 'Iheme', email: 'contact@howelldesign.co' };
 
   return (
-    <section className='home'>
+    <section className='home '>
       <div className="home-content">
         <header className="home-header">
           <HeaderBox 
@@ -23,7 +24,15 @@ const Home = () => {
           />
 
         </header>
+
+        RECENT TRANSACTIONS
       </div>
+
+      <RightSidebar 
+      user={loggedIn}
+      transactions={[]}
+      banks={[{currentBalance: 250.50}, {currentBalance: 550.50}]}
+      />
     </section>
   )
 }

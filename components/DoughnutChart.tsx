@@ -11,14 +11,24 @@ const DoughnutChart = ({accounts} : DoughnutChartProps) => {
         datasets: [
             {
                 label: 'Banks',
-                data: [1250, 2500, 4000, 6000],
-                backgroundColor: ['#0747b6', '#2265d8', '#2f91fa', '#4BC0C0'],
+                data: [1250, 2500, 4000,900],
+                backgroundColor: ['#0747b6', '#2265d8', '#2f91fa', '#2f91fa'],
 
             }
         ],
-        labels: ['Bank 1', 'Bank 2', 'Bank 3', 'Bank 4'],
+        labels: ['Bank 1', 'Bank 2', 'Bank 3'],
     }
-  return <Doughnut data={data} />
+  return <Doughnut 
+  data={data} 
+  options={{
+    cutout: '50%',
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  }}
+  />
 }
 
 export default DoughnutChart

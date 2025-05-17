@@ -14,11 +14,12 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { sidebarLinks } from '@/constants'
 import { cn } from '@/lib/utils'
+import Footer from './Footer'
 
 const MobileNav = ({ user }: MobileNavProps) => {
   const pathname = usePathname();
   return (
-    <section className='w-full max-w-[264px]'>
+    <section className='w-full max-w-[104px]'>
       <Sheet>
   <SheetTrigger>
     <Image 
@@ -56,7 +57,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
                                   width={20}
                                   height={20}
                                   className={cn({
-                                    'brightness-[3] invert-0':isActive
+                                    'brightness-[1] invert-0':isActive
                                   })}
                                 />
                                 <p className={cn({'text-16 font-semibold text-blue-950': 'text-white',
@@ -73,7 +74,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
                 USER 
                   </nav>
                 </SheetClose>
-                FOOTER
+                <Footer user={user} type="mobile"/>
             </div>
         
 
